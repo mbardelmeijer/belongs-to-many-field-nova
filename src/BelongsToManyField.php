@@ -166,7 +166,7 @@ class BelongsToManyField extends Field
         return $this;
     }
 
-    public function resolve($resource, $attribute = null)
+    public function resolve($resource, ?string $attribute = null): void
     {
         if ($this->isAction) {
             parent::resolve($resource, $attribute);
