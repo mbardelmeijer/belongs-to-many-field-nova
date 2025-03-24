@@ -88,7 +88,7 @@ class BelongsToManyField extends Field
     {
         $this->label = $optionsLabel;
 
-        return $this->withMeta(['optionsLabel' => $this->label]);
+        return $this->withMeta(['withLabel' => $this->label]);
     }
 
     public function trackBy(string $trackBy)
@@ -193,7 +193,7 @@ class BelongsToManyField extends Field
             'nullable' => $this->nullable,
             'optionsLabel' => $this->label,
             'trackBy' => $this->trackBy,
-            'panel' => $this->panel,
+            // 'panel' => $this->panel,
             'prefixComponent' => true,
             'readonly' => $this->isReadonly(app(NovaRequest::class)),
             'required' => $this->isRequired(app(NovaRequest::class)),
